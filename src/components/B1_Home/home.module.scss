@@ -1,0 +1,13 @@
+@import '../../assets/scss/app.scss';
+
+.home {
+
+  .title {
+    @include h1();
+
+    span {
+      @include text-gradient(#FF8616, #7A38E7);
+    }
+  }
+
+}

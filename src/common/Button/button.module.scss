@@ -9,7 +9,7 @@
   padding: 18px 0px;
   width: 100%;
   cursor: pointer;
-  transition: 0.3s;
+  background: none;
 
   @include tablet() {
     padding: 18px 32px;
@@ -24,27 +24,6 @@
     }
   }
 
- &__grey {
-   background: #20233F;
-   backdrop-filter: blur(34px);
-
-   &:hover {
-     background: #181B36;
-   }
- }
-
- &__white {
-   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.64) 100%);
-
-   &:hover {
-     background: #FFFFFF;
-   }
-
-   & span {
-     color: #117EFF;
-   }
- }
-
   span {
     font-style: normal;
     font-weight: 600;
@@ -53,5 +32,32 @@
     text-transform: uppercase;
     color: #FFFFFF;
   }
+
+  &__grey {
+    transition: 0.3s;
+    background: #20233F;
+    backdrop-filter: blur(34px);
+
+    &:hover {
+      background: #181B36;
+    }
+  }
+
+  &__white {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.64) 100%);
+
+    &:hover {
+      background: #FFFFFF;
+    }
+
+    span {
+      color: #117EFF;
+    }
+  }
+
+  &__small {
+
+  }
+
 
 }

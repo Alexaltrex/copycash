@@ -1,0 +1,14 @@
+.icon {
+  //fill: $color-base;
+  fill-rule: evenodd;
+  transition: fill .2s ease;
+
+  &__logo {
+    svg {
+      width: 155px;
+      height: 28px;
+    }
+
+  }
+
+}

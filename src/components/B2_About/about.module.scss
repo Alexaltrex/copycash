@@ -1,0 +1,10 @@
+@import '../../assets/scss/app.scss';
+
+.about {
+
+  .title {
+    @include h2();
+
+  }
+
+}

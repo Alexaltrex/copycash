@@ -18,3 +18,35 @@
     @content;
   }
 }
+
+@mixin h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px;
+
+  @include tablet() {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
+
+@mixin h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+
+  @include tablet() {
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+
+@mixin text-gradient ($color1, $color2) {
+  background-image: linear-gradient(90deg, $color1 0%, $color2 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
