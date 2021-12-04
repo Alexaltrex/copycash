@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/copycash/static/css/main.34b3f21a.chunk.css",
-    "main.js": "/copycash/static/js/main.2cf8796c.chunk.js",
-    "main.js.map": "/copycash/static/js/main.2cf8796c.chunk.js.map",
-    "runtime-main.js": "/copycash/static/js/runtime-main.6c57a98f.js",
-    "runtime-main.js.map": "/copycash/static/js/runtime-main.6c57a98f.js.map",
+    "main.css": "/copycash/static/css/main.897f381d.chunk.css",
+    "main.js": "/copycash/static/js/main.44007317.chunk.js",
+    "main.js.map": "/copycash/static/js/main.44007317.chunk.js.map",
+    "runtime-main.js": "/copycash/static/js/runtime-main.477b3403.js",
+    "runtime-main.js.map": "/copycash/static/js/runtime-main.477b3403.js.map",
     "static/css/2.4d8d6c40.chunk.css": "/copycash/static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.b97917e1.chunk.js": "/copycash/static/js/2.b97917e1.chunk.js",
-    "static/js/2.b97917e1.chunk.js.map": "/copycash/static/js/2.b97917e1.chunk.js.map",
-    "static/js/3.378beea3.chunk.js": "/copycash/static/js/3.378beea3.chunk.js",
-    "static/js/3.378beea3.chunk.js.map": "/copycash/static/js/3.378beea3.chunk.js.map",
+    "static/js/2.15d0d275.chunk.js": "/copycash/static/js/2.15d0d275.chunk.js",
+    "static/js/2.15d0d275.chunk.js.map": "/copycash/static/js/2.15d0d275.chunk.js.map",
+    "static/js/3.0df718ca.chunk.js": "/copycash/static/js/3.0df718ca.chunk.js",
+    "static/js/3.0df718ca.chunk.js.map": "/copycash/static/js/3.0df718ca.chunk.js.map",
     "index.html": "/copycash/index.html",
     "static/css/2.4d8d6c40.chunk.css.map": "/copycash/static/css/2.4d8d6c40.chunk.css.map",
-    "static/css/main.34b3f21a.chunk.css.map": "/copycash/static/css/main.34b3f21a.chunk.css.map",
-    "static/js/2.b97917e1.chunk.js.LICENSE.txt": "/copycash/static/js/2.b97917e1.chunk.js.LICENSE.txt"
+    "static/css/main.897f381d.chunk.css.map": "/copycash/static/css/main.897f381d.chunk.css.map",
+    "static/js/2.15d0d275.chunk.js.LICENSE.txt": "/copycash/static/js/2.15d0d275.chunk.js.LICENSE.txt",
+    "static/media/about.16c693c8.jpg": "/copycash/static/media/about.16c693c8.jpg",
+    "static/media/components.f7bcb1c8.png": "/copycash/static/media/components.f7bcb1c8.png",
+    "static/media/home.570aae12.png": "/copycash/static/media/home.570aae12.png",
+    "static/media/howItWorks_scheme.b483af20.png": "/copycash/static/media/howItWorks_scheme.b483af20.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c57a98f.js",
+    "static/js/runtime-main.477b3403.js",
     "static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.b97917e1.chunk.js",
-    "static/css/main.34b3f21a.chunk.css",
-    "static/js/main.2cf8796c.chunk.js"
+    "static/js/2.15d0d275.chunk.js",
+    "static/css/main.897f381d.chunk.css",
+    "static/js/main.44007317.chunk.js"
   ]
 }
