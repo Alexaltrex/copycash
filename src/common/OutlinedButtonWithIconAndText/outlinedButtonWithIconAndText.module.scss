@@ -1,0 +1,78 @@
+@import '../../assets/scss/app.scss';
+
+.outlinedButtonWithIconAndText {
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+
+  @include tablet() {
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 8px 6px 6px;
+  }
+
+  &:hover {
+    border: 1px solid #117EFF;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .leftIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet() {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #0C0F2E;
+    }
+
+    .leftIcon {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4px;
+
+    @include tablet() {
+      margin-top: 0px;
+      margin-left: 10px;
+    }
+  }
+
+
+  .rightIcon {
+    display: none;
+
+    @include tablet() {
+      display: flex;
+      margin-left: -4px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@import '../../assets/scss/app.scss';
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0px 16px;
+  transition: 0.2s;
+
+  &_isSliding {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
+  }
+
+  @include tablet() {
+    height: 72px;
+    padding: 0px 24px;
+  }
+
+  @include desktop() {
+    padding: 0px 85px;
+  }
+
+  .innerWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .logo {
+      text-decoration: none;
+
+      svg {
+        width: 110px;
+        height: 20px;
+
+        @include tablet() {
+          width: 154px;
+          height: 28px;
+        }
+      }
+
+      @include desktop() {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+    }
+
+    .logoSwiper {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+
+      @include desktop() {
+        position: relative;
+        top: 0px;
+        left: 0px;
+
+        & svg {
+          width: 154px;
+          height: 28px;
+        }
+      }
+    }
+
+    .nav {
+      display: none;
+
+      @include desktop() {
+        display: flex;
+        align-items: center;
+
+        .navItem {
+          cursor: pointer;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          text-transform: uppercase;
+          position: relative;
+
+          &_active {
+            @include text-gradient(#1170FF, #11F1FF);
+
+            &::after {
+              position: absolute;
+              bottom: -8px;
+              left: 50%;
+              transform: translateX(-50%);
+              content: '';
+              display: block;
+              width: 4px;
+              height: 4px;
+              background: linear-gradient(97.63deg, #1170FF -0.21%, #11F1FF 102.04%);
+              border-radius: 2px;
+            }
+          }
+
+          &:not(:first-child) {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+
+    .buttonsBlock {
+      display: flex;
+      align-items: center;
+
+      .burger {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #20233F;
+        backdrop-filter: blur(34px);
+        border-radius: 8px;
+
+        width: 28px;
+        height: 28px;
+        margin-left: 12px;
+
+        @include tablet() {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          margin-left: 16px;
+        }
+
+        @include desktop() {
+          display: none;
+        }
+      }
+
+    }
+
+
+  }
+}

@@ -1,0 +1,353 @@
+@import '../../assets/scss/app.scss';
+
+.about {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include desktop() {
+    padding: 0px 20px;
+    height: 100vh;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 0px 16px;
+
+    @include tablet() {
+      border-radius: 16px;
+      left: 20px;
+      padding: 0px 60px;
+    }
+
+    @include desktop() {
+      left: 0px;
+      padding: 0;
+    }
+
+    .innerWrapper {
+      height: 100%;
+      width: 100%;
+      padding-top: 48px;
+      padding-bottom: 32px;
+
+      @include tablet() {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+
+      @include desktop() {
+        margin: 0 auto;
+        width: 1268px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+      }
+
+      .left {
+
+        @include desktop() {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &_title {
+          @include h2();
+        }
+
+        &_text {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ADB0CF;
+          margin-top: 8px;
+
+          @include tablet() {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 16px;
+          }
+
+          @include desktop() {
+            width: 576px;
+          }
+        }
+
+        &_link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          margin-top: 10px;
+
+          @include tablet() {
+            flex-grow: 1;
+            margin-top: 18px;
+            margin-left: 24px;
+          }
+
+          &_text {
+            white-space: nowrap;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #117EFF;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            .left_link_text {
+              color: #0657F5;
+            }
+
+            .left_link_icon svg path {
+              fill: #0657F5;
+            }
+          }
+
+          &_icon {
+            position: relative;
+            top: -2px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+              margin-left: 0px;
+              transform: rotate(90deg);
+
+              path {
+                fill: #117EFF;
+                transition: 0.2s;
+              }
+            }
+
+
+          }
+        }
+
+        &_people {
+          margin-top: 24px;
+          border-radius: 16px;
+          overflow: hidden;
+          position: relative;
+          background: #020525;
+          backdrop-filter: blur(40px);
+
+          @include tablet() {
+            margin-top: 42px;
+          }
+
+          @include desktop() {
+            margin-top: 66px;
+          }
+
+          &_back {
+            z-index: 1;
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            bottom: 1px;
+            right: 1px;
+            background-size: cover;
+            background-position: center;
+          }
+
+          &_inner {
+            border-radius: 16px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 24px 16px;
+
+            backdrop-filter: blur(40px);
+
+            @include desktop() {
+              padding: 35px 27px;
+            }
+
+            .people {
+
+            }
+
+            .texts {
+              margin-left: 16px;
+
+              @include tablet() {
+                margin-left: 20px;
+              }
+
+
+              svg {
+                width: 110.42px;
+                height: 20px;
+
+                @include tablet() {
+                  width: 132.51px;
+                  height: 24px;
+                }
+
+                & path {
+                  fill: white;
+                }
+              }
+
+              &_text {
+                @include text-gradient(#16D5FF, #21B264);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                margin-top: 4px;
+
+                @include tablet() {
+                  margin-top: 8px;
+                  font-size: 32px;
+                  line-height: 36px;
+                }
+
+              }
+            }
+
+
+          }
+
+
+        }
+
+      }
+
+      .right {
+        margin-top: 16px;
+
+        @include tablet() {
+          margin-top: 40px;
+        }
+
+        @include desktop() {
+          margin-top: 0px;
+        }
+
+        &_videoWrapper {
+          position: relative;
+          border-radius: 16px;
+          overflow: hidden;
+          &_video {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+          }
+
+          &_control {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &_icon {
+              svg {
+                width: 64px;
+                height: 44px;
+              }
+            }
+
+            &_text {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 20px;
+              text-align: center;
+              text-transform: uppercase;
+              margin-top: 8px;
+            }
+
+          }
+
+        }
+
+
+
+
+
+        &_divider {
+          display: flex;
+          align-items: center;
+          margin-top: 24px;
+
+          @include tablet() {
+            margin-top: 40px;
+          }
+
+          @include desktop() {
+            margin-top: 28px;
+          }
+
+          &_line {
+            flex-grow: 1;
+            background: #3D4059;
+            height: 1px;
+          }
+
+          &_text {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+          }
+        }
+
+
+        &_logos {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 24px;
+
+          @include tablet() {
+            margin-top: 32px;
+          }
+
+          svg {
+            height: 16px;
+            width: auto;
+
+            @include tablet() {
+              height: 28px;
+            }
+
+
+
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+
+}

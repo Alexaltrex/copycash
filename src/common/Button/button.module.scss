@@ -56,6 +56,20 @@
   }
 
   &__small {
+    border-radius: 8px;
+    padding: 4px 12px;
+    width: auto;
+
+    @include tablet() {
+      padding: 14px 25px;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 20px;
+
+
+    }
 
   }
 

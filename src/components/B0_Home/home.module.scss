@@ -1,0 +1,223 @@
+@import '../../assets/scss/app.scss';
+
+.home {
+  @include container();
+
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 16px;
+
+  @include tablet() {
+    padding-top: 143px;
+    padding-bottom: 0px;
+  }
+
+  @include desktop() {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .innerWrapper {
+    @include innerWrapper();
+    display: flex;
+    flex-direction: column;
+
+    @include desktop() {
+      flex-direction: row;
+      align-items: center;
+      height: 100vh;
+    }
+
+
+    .leftBlock {
+      display: flex;
+      flex-direction: column;
+
+      @include desktop() {
+        width: 652px;
+      }
+
+      .titleWrapper {
+        position: relative;
+
+        .title {
+          position: relative;
+          z-index: 1;
+          @include h1();
+
+          width: 209px;
+
+          @include tablet() {
+            width: 592px;
+          }
+
+          span {
+            @include text-gradient(#FF8616, #7A38E7);
+          }
+        }
+
+        .img {
+          z-index: 0;
+          position: absolute;
+          width: 252.5px;
+          height: 61.09px;
+          bottom: -16px;
+          left: -12px;
+
+          @include tablet() {
+            width: 567.5px;
+            height: 137.3px;
+            bottom: -34px;
+            left: -32px;
+          }
+
+        }
+
+
+      }
+
+      .buttons {
+        display: flex;
+        margin-top: 16px;
+
+        @include tablet() {
+          margin-top: 24px;
+        }
+
+
+        .button {
+          &:not(:first-child) {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #ADB0CF;
+        margin-top: 16px;
+
+        @include tablet() {
+          width: 620px;
+          font-size: 18px;
+          line-height: 30px;
+          margin-top: 24px;
+        }
+
+        @include desktop() {
+          display: none;
+        }
+
+      }
+
+      .bottomBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+
+        @include tablet() {
+          align-self: flex-start;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-top: 16px;
+        }
+
+
+        &_left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include tablet() {
+            flex-grow: 0;
+          }
+
+          &_text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #6E73A0;
+            margin-top: 8px;
+          }
+        }
+
+        &_link {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          margin-top: 10px;
+
+          @include tablet() {
+            flex-grow: 1;
+            margin-top: 18px;
+            margin-left: 24px;
+          }
+
+          &_text {
+            white-space: nowrap;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #117EFF;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            .bottomBlock_link_text {
+              color: #0657F5;
+            }
+
+            .bottomBlock_link_icon svg path {
+              fill: #0657F5;
+            }
+          }
+
+          &_icon {
+            svg {
+              width: 24px;
+              height: 24px;
+              margin-left: -4px;
+
+              path {
+                fill: #117EFF;
+                transition: 0.2s;
+              }
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+
+    .img {
+      @include desktop() {
+        width: 775.69px;
+        height: auto;
+        //position: absolute;
+        //bottom: 0px;
+        //right: -40px;
+        //width: 775.69px;
+        //height: 708.97px;
+      }
+    }
+
+
+  }
+
+
+}

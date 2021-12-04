@@ -17,12 +17,11 @@ export const Button: FC<IButton> = ({
                                         className
                                     }) => {
     return (
-        <button className={clsx(
-            style.button,
-            style[`button__${type}`],
-            style.button__small && size === 'small',
-            className
-        )}>
+        <button className={clsx({
+            [style.button]: true,
+            [style[`button__${type}`]]: true,
+            [style.button__small]: size === 'small',
+        }, className)}>
             <span>{text}</span>
         </button>
     )

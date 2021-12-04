@@ -1,0 +1,63 @@
+@import '../../assets/scss/app.scss';
+
+.leftSidebar {
+  display: none;
+
+  @include desktop() {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .navItem {
+      cursor: pointer;
+      width: 10px;
+      height: 4px;
+      background: #45475E;
+      transition: 0.2s;
+      position: relative;
+
+
+      .text {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        left: calc(-0% + 29px);
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        @include text-gradient(#1170FF, #11F1FF);
+      }
+
+      &:hover {
+        width: 16px;
+        background: linear-gradient(97.63deg, #1170FF -0.21%, #11F1FF 102.04%);
+      }
+
+      &_active {
+        width: 16px;
+        background: linear-gradient(97.63deg, #1170FF -0.21%, #11F1FF 102.04%);
+
+        .text {
+          display: block;
+        }
+
+      }
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+
+
+}

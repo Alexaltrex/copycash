@@ -1,0 +1,49 @@
+@import '../../assets/scss/app.scss';
+
+.rightSidebar {
+  display: none;
+
+  @include tablet() {
+    z-index: 888;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 24px;
+    top: 143px;
+  }
+
+  @include desktop() {
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .socialLink {
+    display: block;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        transition: 0.3s;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    &:hover {
+      & svg path {
+        fill: #117EFF;
+      }
+    }
+
+
+  }
+
+}

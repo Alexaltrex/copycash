@@ -1,0 +1,71 @@
+@import '../../assets/scss/app.scss';
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+
+  @include tablet() {
+    padding-top: 225px;
+  }
+
+  @include desktop() {
+    padding-top: 0px;
+  }
+
+  .howItWorks {
+    position: relative;
+    overflow: scroll;
+
+    @include desktop() {
+      height: 100vh;
+    }
+
+    &::-webkit-scrollbar {
+      width:0!important;
+    }
+
+    .back {
+      @include desktop() {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .scheme {
+        height: 355px;
+        width: auto;
+
+        @include tablet() {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+    }
+
+    &_title {
+      @include h2();
+
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 32px;
+      left: 16px;
+
+      @include tablet() {
+        top: 80px;
+        left: 24px;
+      }
+
+      @include desktop() {
+        top: 80px;
+        left: calc((100vw - 1268px) / 2);
+      }
+
+    }
+  }
+}
+

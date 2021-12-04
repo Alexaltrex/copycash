@@ -1,0 +1,320 @@
+@import '../../assets/scss/app.scss';
+
+.defi {
+  width: 100%;
+
+  @include desktop() {
+    height: 100vh;
+  }
+
+  .card {
+    height: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 32px 16px;
+
+    @include tablet() {
+      padding: 80px 24px;
+    }
+
+    @include desktop() {
+      border-radius: 16px;
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .inner {
+      @include desktop() {
+        width: 1268px;
+        margin: 0 auto;
+      }
+
+      .defi_title {
+        @include h2();
+      }
+
+      .defi_subtitle1 {
+        display: flex;
+
+        svg {
+          width: 20px;
+          height: 20px;
+
+          @include tablet() {
+            width: 34px;
+            height: 34px;
+          }
+        }
+
+        &_text {
+          @include h2();
+          margin-left: 8px;
+          color: white!important;
+
+          @include tablet() {
+            margin-left: 16px;
+          }
+        }
+
+      }
+
+      .defi_subtitle2 {
+        display: flex;
+        padding-left: 40px;
+
+        @include tablet() {
+          padding-left: 60px;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+
+          @include tablet() {
+            width: 34px;
+            height: 34px;
+          }
+        }
+
+        &_text {
+          @include h2();
+          margin-left: 8px;
+          @include text-gradient(#1170FF, #11F1FF);
+
+          @include tablet() {
+            margin-left: 16px;
+          }
+        }
+
+      }
+
+      .blocks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+
+        @include tablet() {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 50px;
+        }
+
+        @include desktop() {
+          align-items: center;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 24px;
+        }
+      }
+
+      .block1, .block2 {
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(33px);
+        border: 1px solid #117EFF;
+        padding: 24px;
+        box-sizing: border-box;
+        border-radius: 16px;
+
+        @include tablet() {
+          flex-grow: 1;
+          width: calc(50% - 8px);
+        }
+
+        @include desktop() {
+          width: auto;
+        }
+
+        .title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 16px;
+          color: white!important;
+
+          @include tablet() {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+
+        .items {
+          .item {
+            display: flex;
+
+            &:not(:first-child) {
+              margin-top: 18px;
+            }
+
+            img {
+              display: block;
+              width: 24px;
+              height: 24px;
+            }
+
+            p {
+              margin-left: 12px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 24px;
+              text-transform: uppercase;
+              color: white!important;
+            }
+          }
+        }
+
+      }
+
+      .block1 {
+        @include desktop() {
+         order: 1;
+        }
+      }
+
+      .block2 {
+        @include desktop() {
+          order: 3;
+        }
+      }
+
+      .block2 {
+        margin-top: 16px;
+
+        @include tablet() {
+          margin-top: 0px;
+          margin-left: 16px;
+        }
+
+        @include desktop() {
+          margin-left: 0;
+        }
+      }
+
+      .block_blue {
+        background: linear-gradient(97.63deg, #1170FF -0.21%, #11F1FF 102.04%);
+        box-shadow: 0px 0px 184px -10px rgba(17, 185, 255, 0.4);
+        border-radius: 16px;
+        margin-top: 16px;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include tablet() {
+          padding: 40px 32px 48px;
+          margin-top: 48px;
+        }
+
+        @include desktop() {
+          margin-top: 0;
+          //flex-grow: 1;
+          order: 2;
+        }
+
+        .logo {
+          align-self: center;
+
+          svg {
+            width: 220.85px;
+            height: 40px;
+
+            path {
+              fill: white;
+            }
+          }
+        }
+
+        .items {
+          margin-top: 24px;
+
+          @include tablet() {
+            margin-top: 32px;
+          }
+
+          .item {
+            display: flex;
+
+            &:not(:first-child) {
+              margin-top: 14px;
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+
+            p {
+              margin-left: 12px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 24px;
+              text-transform: uppercase;
+              color: white!important;
+            }
+          }
+        }
+
+        .dollar {
+          position: absolute;
+          z-index: 0;
+          bottom: 4px;
+          right: 9px;
+        }
+
+        .circle1, .circle2,
+        .defi_arrow_left, .defi_arrow_right,
+        .defi_arrow_desktop_left, .defi_arrow_desktop_right {
+          position: absolute;
+        }
+
+        .circle1 {
+          top: 0;
+          right: 0;
+        }
+
+        .circle2 {
+          bottom: 0;
+          left: 0;
+        }
+
+        .defi_arrow_left {
+          z-index: 0;
+          @include onlyTablet();
+          transform: translateX(-100%);
+          top: -61px;
+          left: 0;
+        }
+
+        .defi_arrow_right {
+          z-index: 0;
+          @include onlyTablet();
+          transform: translateX(100%);
+          top: -61px;
+          right: 0;
+        }
+
+        .defi_arrow_desktop_left {
+          @include onlyDesktop();
+          transform: translateX(-100%);
+          left: 0;
+          bottom: 10px;
+        }
+
+        .defi_arrow_desktop_right {
+          @include onlyDesktop();
+          transform: translateX(100%);
+          right: 0;
+          top: 10px;
+        }
+
+      }
+
+    }
+  }
+}
