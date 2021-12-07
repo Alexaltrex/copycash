@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/copycash/static/css/main.e09eb8aa.chunk.css",
-    "main.js": "/copycash/static/js/main.9ff24334.chunk.js",
-    "main.js.map": "/copycash/static/js/main.9ff24334.chunk.js.map",
-    "runtime-main.js": "/copycash/static/js/runtime-main.ecf922a9.js",
-    "runtime-main.js.map": "/copycash/static/js/runtime-main.ecf922a9.js.map",
+    "main.css": "/copycash/static/css/main.9b9c00e7.chunk.css",
+    "main.js": "/copycash/static/js/main.97462190.chunk.js",
+    "main.js.map": "/copycash/static/js/main.97462190.chunk.js.map",
+    "runtime-main.js": "/copycash/static/js/runtime-main.d051600b.js",
+    "runtime-main.js.map": "/copycash/static/js/runtime-main.d051600b.js.map",
     "static/css/2.4d8d6c40.chunk.css": "/copycash/static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.086ea01f.chunk.js": "/copycash/static/js/2.086ea01f.chunk.js",
-    "static/js/2.086ea01f.chunk.js.map": "/copycash/static/js/2.086ea01f.chunk.js.map",
-    "static/js/3.6bd17ef8.chunk.js": "/copycash/static/js/3.6bd17ef8.chunk.js",
-    "static/js/3.6bd17ef8.chunk.js.map": "/copycash/static/js/3.6bd17ef8.chunk.js.map",
+    "static/js/2.7eaa6c0c.chunk.js": "/copycash/static/js/2.7eaa6c0c.chunk.js",
+    "static/js/2.7eaa6c0c.chunk.js.map": "/copycash/static/js/2.7eaa6c0c.chunk.js.map",
+    "static/js/3.62b4084f.chunk.js": "/copycash/static/js/3.62b4084f.chunk.js",
+    "static/js/3.62b4084f.chunk.js.map": "/copycash/static/js/3.62b4084f.chunk.js.map",
     "index.html": "/copycash/index.html",
     "static/css/2.4d8d6c40.chunk.css.map": "/copycash/static/css/2.4d8d6c40.chunk.css.map",
-    "static/css/main.e09eb8aa.chunk.css.map": "/copycash/static/css/main.e09eb8aa.chunk.css.map",
-    "static/js/2.086ea01f.chunk.js.LICENSE.txt": "/copycash/static/js/2.086ea01f.chunk.js.LICENSE.txt",
+    "static/css/main.9b9c00e7.chunk.css.map": "/copycash/static/css/main.9b9c00e7.chunk.css.map",
+    "static/js/2.7eaa6c0c.chunk.js.LICENSE.txt": "/copycash/static/js/2.7eaa6c0c.chunk.js.LICENSE.txt",
     "static/media/about.16c693c8.jpg": "/copycash/static/media/about.16c693c8.jpg",
     "static/media/cashToken_logo.75d92514.png": "/copycash/static/media/cashToken_logo.75d92514.png",
     "static/media/components.f7bcb1c8.png": "/copycash/static/media/components.f7bcb1c8.png",
@@ -28,13 +28,15 @@
     "static/media/roadmap_line_tablet.8d55bf4f.png": "/copycash/static/media/roadmap_line_tablet.8d55bf4f.png",
     "static/media/team_back.ed7f5431.jpg": "/copycash/static/media/team_back.ed7f5431.jpg",
     "static/media/tokenomics_coin.bb6660c2.png": "/copycash/static/media/tokenomics_coin.bb6660c2.png",
+    "static/media/trader_card_back.fecc4a12.png": "/copycash/static/media/trader_card_back.fecc4a12.png",
+    "static/media/traders_phones.3a5bc87b.png": "/copycash/static/media/traders_phones.3a5bc87b.png",
     "static/media/wallet_logo.fddfaad6.png": "/copycash/static/media/wallet_logo.fddfaad6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ecf922a9.js",
+    "static/js/runtime-main.d051600b.js",
     "static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.086ea01f.chunk.js",
-    "static/css/main.e09eb8aa.chunk.css",
-    "static/js/main.9ff24334.chunk.js"
+    "static/js/2.7eaa6c0c.chunk.js",
+    "static/css/main.9b9c00e7.chunk.css",
+    "static/js/main.97462190.chunk.js"
   ]
 }
