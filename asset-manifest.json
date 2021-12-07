@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/copycash/static/css/main.fe4a71f0.chunk.css",
+    "main.css": "/copycash/static/css/main.7fb8a55a.chunk.css",
     "main.js": "/copycash/static/js/main.504da77c.chunk.js",
     "main.js.map": "/copycash/static/js/main.504da77c.chunk.js.map",
     "runtime-main.js": "/copycash/static/js/runtime-main.b56ad8b0.js",
@@ -12,7 +12,7 @@
     "static/js/3.b4fe378f.chunk.js.map": "/copycash/static/js/3.b4fe378f.chunk.js.map",
     "index.html": "/copycash/index.html",
     "static/css/2.4d8d6c40.chunk.css.map": "/copycash/static/css/2.4d8d6c40.chunk.css.map",
-    "static/css/main.fe4a71f0.chunk.css.map": "/copycash/static/css/main.fe4a71f0.chunk.css.map",
+    "static/css/main.7fb8a55a.chunk.css.map": "/copycash/static/css/main.7fb8a55a.chunk.css.map",
     "static/js/2.88349b8d.chunk.js.LICENSE.txt": "/copycash/static/js/2.88349b8d.chunk.js.LICENSE.txt",
     "static/media/about.16c693c8.jpg": "/copycash/static/media/about.16c693c8.jpg",
     "static/media/cashToken_logo.75d92514.png": "/copycash/static/media/cashToken_logo.75d92514.png",
@@ -38,7 +38,7 @@
     "static/js/runtime-main.b56ad8b0.js",
     "static/css/2.4d8d6c40.chunk.css",
     "static/js/2.88349b8d.chunk.js",
-    "static/css/main.fe4a71f0.chunk.css",
+    "static/css/main.7fb8a55a.chunk.css",
     "static/js/main.504da77c.chunk.js"
   ]
 }
