@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/copycash/static/css/main.9b9c00e7.chunk.css",
-    "main.js": "/copycash/static/js/main.97462190.chunk.js",
-    "main.js.map": "/copycash/static/js/main.97462190.chunk.js.map",
-    "runtime-main.js": "/copycash/static/js/runtime-main.d051600b.js",
-    "runtime-main.js.map": "/copycash/static/js/runtime-main.d051600b.js.map",
+    "main.css": "/copycash/static/css/main.fe4a71f0.chunk.css",
+    "main.js": "/copycash/static/js/main.504da77c.chunk.js",
+    "main.js.map": "/copycash/static/js/main.504da77c.chunk.js.map",
+    "runtime-main.js": "/copycash/static/js/runtime-main.b56ad8b0.js",
+    "runtime-main.js.map": "/copycash/static/js/runtime-main.b56ad8b0.js.map",
     "static/css/2.4d8d6c40.chunk.css": "/copycash/static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.7eaa6c0c.chunk.js": "/copycash/static/js/2.7eaa6c0c.chunk.js",
-    "static/js/2.7eaa6c0c.chunk.js.map": "/copycash/static/js/2.7eaa6c0c.chunk.js.map",
-    "static/js/3.62b4084f.chunk.js": "/copycash/static/js/3.62b4084f.chunk.js",
-    "static/js/3.62b4084f.chunk.js.map": "/copycash/static/js/3.62b4084f.chunk.js.map",
+    "static/js/2.88349b8d.chunk.js": "/copycash/static/js/2.88349b8d.chunk.js",
+    "static/js/2.88349b8d.chunk.js.map": "/copycash/static/js/2.88349b8d.chunk.js.map",
+    "static/js/3.b4fe378f.chunk.js": "/copycash/static/js/3.b4fe378f.chunk.js",
+    "static/js/3.b4fe378f.chunk.js.map": "/copycash/static/js/3.b4fe378f.chunk.js.map",
     "index.html": "/copycash/index.html",
     "static/css/2.4d8d6c40.chunk.css.map": "/copycash/static/css/2.4d8d6c40.chunk.css.map",
-    "static/css/main.9b9c00e7.chunk.css.map": "/copycash/static/css/main.9b9c00e7.chunk.css.map",
-    "static/js/2.7eaa6c0c.chunk.js.LICENSE.txt": "/copycash/static/js/2.7eaa6c0c.chunk.js.LICENSE.txt",
+    "static/css/main.fe4a71f0.chunk.css.map": "/copycash/static/css/main.fe4a71f0.chunk.css.map",
+    "static/js/2.88349b8d.chunk.js.LICENSE.txt": "/copycash/static/js/2.88349b8d.chunk.js.LICENSE.txt",
     "static/media/about.16c693c8.jpg": "/copycash/static/media/about.16c693c8.jpg",
     "static/media/cashToken_logo.75d92514.png": "/copycash/static/media/cashToken_logo.75d92514.png",
     "static/media/components.f7bcb1c8.png": "/copycash/static/media/components.f7bcb1c8.png",
+    "static/media/contacts_coins.37692eea.png": "/copycash/static/media/contacts_coins.37692eea.png",
     "static/media/faq.f170cffe.jpg": "/copycash/static/media/faq.f170cffe.jpg",
     "static/media/flags.171c0b4d.png": "/copycash/static/media/flags.171c0b4d.png",
+    "static/media/footer.ded8e28c.jpg": "/copycash/static/media/footer.ded8e28c.jpg",
     "static/media/home.570aae12.png": "/copycash/static/media/home.570aae12.png",
     "static/media/howItWorks_scheme.b483af20.png": "/copycash/static/media/howItWorks_scheme.b483af20.png",
     "static/media/platform.76f657d9.png": "/copycash/static/media/platform.76f657d9.png",
@@ -33,10 +35,10 @@
     "static/media/wallet_logo.fddfaad6.png": "/copycash/static/media/wallet_logo.fddfaad6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d051600b.js",
+    "static/js/runtime-main.b56ad8b0.js",
     "static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.7eaa6c0c.chunk.js",
-    "static/css/main.9b9c00e7.chunk.css",
-    "static/js/main.97462190.chunk.js"
+    "static/js/2.88349b8d.chunk.js",
+    "static/css/main.fe4a71f0.chunk.css",
+    "static/js/main.504da77c.chunk.js"
   ]
 }
