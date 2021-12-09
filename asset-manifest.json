@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/copycash/static/css/main.52563566.chunk.css",
-    "main.js": "/copycash/static/js/main.4f5d6aa9.chunk.js",
-    "main.js.map": "/copycash/static/js/main.4f5d6aa9.chunk.js.map",
-    "runtime-main.js": "/copycash/static/js/runtime-main.b56ad8b0.js",
-    "runtime-main.js.map": "/copycash/static/js/runtime-main.b56ad8b0.js.map",
+    "main.css": "/copycash/static/css/main.92c5c0bf.chunk.css",
+    "main.js": "/copycash/static/js/main.cfdeff85.chunk.js",
+    "main.js.map": "/copycash/static/js/main.cfdeff85.chunk.js.map",
+    "runtime-main.js": "/copycash/static/js/runtime-main.6d92ac4b.js",
+    "runtime-main.js.map": "/copycash/static/js/runtime-main.6d92ac4b.js.map",
     "static/css/2.4d8d6c40.chunk.css": "/copycash/static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.70cbf40c.chunk.js": "/copycash/static/js/2.70cbf40c.chunk.js",
-    "static/js/2.70cbf40c.chunk.js.map": "/copycash/static/js/2.70cbf40c.chunk.js.map",
-    "static/js/3.b4fe378f.chunk.js": "/copycash/static/js/3.b4fe378f.chunk.js",
-    "static/js/3.b4fe378f.chunk.js.map": "/copycash/static/js/3.b4fe378f.chunk.js.map",
+    "static/js/2.fb55569e.chunk.js": "/copycash/static/js/2.fb55569e.chunk.js",
+    "static/js/2.fb55569e.chunk.js.map": "/copycash/static/js/2.fb55569e.chunk.js.map",
+    "static/js/3.2dce8cb7.chunk.js": "/copycash/static/js/3.2dce8cb7.chunk.js",
+    "static/js/3.2dce8cb7.chunk.js.map": "/copycash/static/js/3.2dce8cb7.chunk.js.map",
     "index.html": "/copycash/index.html",
     "static/css/2.4d8d6c40.chunk.css.map": "/copycash/static/css/2.4d8d6c40.chunk.css.map",
-    "static/css/main.52563566.chunk.css.map": "/copycash/static/css/main.52563566.chunk.css.map",
-    "static/js/2.70cbf40c.chunk.js.LICENSE.txt": "/copycash/static/js/2.70cbf40c.chunk.js.LICENSE.txt",
+    "static/css/main.92c5c0bf.chunk.css.map": "/copycash/static/css/main.92c5c0bf.chunk.css.map",
+    "static/js/2.fb55569e.chunk.js.LICENSE.txt": "/copycash/static/js/2.fb55569e.chunk.js.LICENSE.txt",
     "static/media/about.16c693c8.jpg": "/copycash/static/media/about.16c693c8.jpg",
     "static/media/about.bd2c7733.png": "/copycash/static/media/about.bd2c7733.png",
     "static/media/cashToken_logo.77388ae5.png": "/copycash/static/media/cashToken_logo.77388ae5.png",
@@ -54,10 +54,10 @@
     "static/media/wallet_logo.d2f8dd3f.png": "/copycash/static/media/wallet_logo.d2f8dd3f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b56ad8b0.js",
+    "static/js/runtime-main.6d92ac4b.js",
     "static/css/2.4d8d6c40.chunk.css",
-    "static/js/2.70cbf40c.chunk.js",
-    "static/css/main.52563566.chunk.css",
-    "static/js/main.4f5d6aa9.chunk.js"
+    "static/js/2.fb55569e.chunk.js",
+    "static/css/main.92c5c0bf.chunk.css",
+    "static/js/main.cfdeff85.chunk.js"
   ]
 }
