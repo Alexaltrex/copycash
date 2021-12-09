@@ -1,0 +1,73 @@
+@import '../../assets/scss/app.scss';
+
+.cookies {
+  background: #00010D;
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablet() {
+    padding: 8px 16px;
+    width: auto;
+  }
+
+  @include desktop() {
+    justify-content: center;
+  }
+
+  .text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A5B2C7;
+
+    @include tablet() {
+      white-space: nowrap;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #6E73A0;
+    }
+  }
+
+  .button {
+    border: none;
+    background: #117EFF;
+    //background: linear-gradient(180deg, #117EFF 0%, #0657F5 100%);
+    border-radius: 12px;
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+
+    @include tablet() {
+      margin-left: 16px;
+    }
+
+    &:hover {
+      background: #0657F5;
+    }
+
+  }
+
+
+}

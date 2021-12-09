@@ -4,6 +4,7 @@
   overflow: hidden;
   position: relative;
 
+
   @include tablet() {
     padding-top: 225px;
   }
@@ -12,25 +13,71 @@
     padding-top: 0px;
   }
 
+  .title_mobile {
+    @include h2();
+
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 32px;
+    left: 16px;
+
+    @include tablet() {
+      top: 80px;
+      left: 24px;
+    }
+
+    @include desktop() {
+      display: none;
+    }
+
+  }
+
   .howItWorks {
     position: relative;
     overflow: scroll;
+
+    @include grow();
 
     @include desktop() {
       height: 100vh;
     }
 
     &::-webkit-scrollbar {
-      width:0!important;
+      width: 0 !important;
+    }
+
+    .title_desktop {
+      @include h2();
+
+      @include onlyDesktop() {
+        position: absolute;
+        top: calc((100vh - 712px) / 2);
+        left: calc((100vw - 1268px) / 2);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+      }
+
     }
 
     .back {
+
+      @include tablet() {
+        padding: 0px 20px;
+        box-sizing: border-box;
+      }
+
       @include desktop() {
+        padding: 0;
         height: 100vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
       }
 
       .scheme {
@@ -41,28 +88,11 @@
           width: 100%;
           height: auto;
         }
-      }
 
-    }
-
-    &_title {
-      @include h2();
-
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 32px;
-      left: 16px;
-
-      @include tablet() {
-        top: 80px;
-        left: 24px;
-      }
-
-      @include desktop() {
-        top: 80px;
-        left: calc((100vw - 1268px) / 2);
+        @include desktop() {
+          width: 1369.28px;
+          height: 712.64px;
+        }
       }
 
     }

@@ -19,7 +19,8 @@
       background: #45475E;
       transition: 0.2s;
       position: relative;
-
+      margin-top: 6px;
+      margin-bottom: 6px;
 
       .text {
         display: none;
@@ -52,9 +53,6 @@
 
       }
 
-      &:not(:first-child) {
-        margin-top: 12px;
-      }
     }
   }
 

@@ -1,8 +1,6 @@
 import React from "react";
 import style from './components.module.scss'
-import {svgIcons} from "../../assets/svg/svgIcons";
-import {SvgIcon} from "../../common/SvgIcon/SvgIcon";
-import logo from '../../../src/assets/png/components.png';
+import logo from '../../../src/assets/webp/components.webp';
 import components_0 from '../../assets/png/components_1.png';
 import components_1 from '../../assets/png/components_2.png';
 import components_2 from '../../assets/png/components_3.png';
@@ -10,6 +8,8 @@ import components_3 from '../../assets/png/components_4.png';
 import components_4 from '../../assets/png/components_5.png';
 import components_5 from '../../assets/png/components_6.png';
 import ellipse from '../../assets/png/home_ellips.png'
+import {useInter} from "../../hooks/useInter";
+import clsx from "clsx";
 
 export interface IComponent {
     icon: string
@@ -58,9 +58,12 @@ const components: IComponent[] = [
 ];
 
 export const Components = () => {
+    const {ref, intersected} = useInter();
+
     return (
-        <section className={style.components}>
-            <div className={style.inner}>
+        <section className={style.components} ref={ref}
+        >
+            <div className={clsx(style.inner, intersected && style.inner_inter)}>
 
                 <div className={style.titleWrapper}>
                     <h2 className={style.title}>Copycash</h2>

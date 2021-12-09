@@ -1,0 +1,79 @@
+@import '../../assets/scss/app.scss';
+
+.note {
+  position: fixed;
+  z-index: 777;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0px 16px;
+  box-sizing: border-box;
+  transform: translateY(300%);
+  bottom: 16px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+
+  &_show {
+    transform: translateY(0%);
+  }
+
+  &_show_with_coockies {
+    transform: translateY(0%);
+    bottom: 92px;
+
+    @include tablet() {
+      bottom: 72px;
+    }
+
+    @include desktop() {
+      bottom: 16px;
+    }
+  }
+
+  .inner {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(9px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+
+    .check {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .text {
+      //flex-grow: 1;
+      margin-left: 8px;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+
+
+  .btn {
+    margin-left: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: #6E73A0;
+      }
+    }
+  }
+
+}

@@ -2,8 +2,6 @@ import React, {FC} from "react";
 import style from './burgerMenu.module.scss';
 import clsx from "clsx";
 import {slides, socialLinks} from "../../constants/constants";
-import {SvgIcon} from "../../common/SvgIcon/SvgIcon";
-import {svgIcons} from "../../assets/svg/svgIcons";
 import {HashLink} from "react-router-hash-link";
 
 export interface IBurgerMenu {
@@ -18,25 +16,27 @@ export const BurgerMenu: FC<IBurgerMenu> = ({
                                                 currentIndex,
                                                 onClickHandler,
                                                 closeBurger
-}) => {
+                                            }) => {
     return (
         <div className={clsx({
             [style.burgerMenu]: true,
             [style.burgerMenu_open]: isBurgerMenuOpen,
         })}>
+            <div className={style.mask}/>
             <div className={style.innerWrapper}>
 
                 <nav className={style.links}>
                     {
                         slides.map((slide => {
-                            if (slide.disableInHeader) return
+                                if (slide.disableInHeader) return
                                 return (
                                     <HashLink key={slide.id}
                                               className={clsx({
                                                   [style.link]: true,
                                                   [style.link_active]: slide.id === currentIndex
                                               })}
-                                              to={`#${slide.text}`}
+                                              to={`#${slide.hash}`}
+                                              smooth={true}
                                               onClick={() => {
                                                   closeBurger();
                                                   onClickHandler(slide.id)
@@ -54,8 +54,8 @@ export const BurgerMenu: FC<IBurgerMenu> = ({
                     {
                         socialLinks.map(({url, icon}, index) => (
                             <a key={index}
-                                      className={style.socialLink}
-                                      href={url}
+                               className={style.socialLink}
+                               href={url}
                             >
                                 {icon}
                             </a>
@@ -66,4 +66,5 @@ export const BurgerMenu: FC<IBurgerMenu> = ({
             </div>
         </div>
     )
-}
+};
+

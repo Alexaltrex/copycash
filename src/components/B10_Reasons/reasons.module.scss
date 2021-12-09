@@ -1,0 +1,219 @@
+@import '../../assets/scss/app.scss';
+
+.reasons {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #00010D 0%, #020525 100%);
+  position: relative;
+  overflow: hidden;
+
+  @include container();
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include tablet() {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+
+  @include desktop() {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flags {
+    z-index: 0;
+    position: absolute;
+    left: 67px;
+    top: 75px;
+    width: 467px;
+    height: auto;
+    opacity: 0.2;
+
+    @include tablet() {
+      top: 160px;
+      left: auto;
+      right: -147px;
+      width: 579.05px;
+      height: 760px;
+    }
+
+    @include desktop() {
+      height: 100vh;
+      width: auto;
+      right: 20px;
+      top: 0;
+      opacity: 0.9;
+    }
+  }
+
+  .inner {
+    @include grow();
+    position: relative;
+    z-index: 1;
+    @include innerWrapper();
+    display: flex;
+    flex-direction: column;
+
+    .titleWrapper {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      .title {
+        @include h2();
+
+        span {
+          @include text-gradient(rgba(22, 213, 255, 1), rgba(33, 178, 100, 1));
+        }
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        width: 143px;
+        height: 49.85px;
+        top: -11px;
+        right: -13px;
+
+        @include tablet() {
+          width: 325px;
+          height: 113.3px;
+          top: -19px;
+          right: -30px;
+        }
+      }
+    }
+
+    .items {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+
+      @include tablet() {
+        margin-top: 56px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        'a .'
+        'b c'
+        'd e';
+        grid-gap: 48px 40px;
+      }
+
+      @include desktop() {
+        margin-top: 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+                'a b .'
+                'c d e';
+        grid-gap: 48px 28px;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &:not(:first-child) {
+          margin-top: 16px;
+
+          @include tablet() {
+            margin-top: 0px;
+          }
+        }
+
+        &:nth-child(1) {
+          @include tablet() {
+            grid-area: a;
+          }
+        }
+
+        &:nth-child(2) {
+          @include tablet() {
+            grid-area: b;
+          }
+        }
+
+        &:nth-child(3) {
+          @include tablet() {
+            grid-area: c;
+          }
+        }
+
+        &:nth-child(4) {
+          @include tablet() {
+            grid-area: d;
+          }
+        }
+
+        &:nth-child(5) {
+          @include tablet() {
+            grid-area: e;
+          }
+        }
+
+        .number {
+          font-style: normal;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 32px;
+          background: -webkit-linear-gradient(0deg, rgba(22, 213, 255, 1) 0%, rgba(33, 179, 100, 1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 2px transparent;
+          color: #020525;
+
+          @include tablet() {
+            font-size: 44px;
+            line-height: 45px;
+          }
+        }
+
+        .title {
+          margin-top: 8px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+
+          @include tablet() {
+            margin-top: 16px;
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+
+        .text {
+          margin-top: 4px;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ADB0CF;
+
+          @include tablet() {
+            margin-top: 8px;
+          }
+        }
+
+
+      }
+
+
+
+
+    }
+
+
+
+  }
+}

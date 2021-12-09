@@ -1,0 +1,338 @@
+@import '../../assets/scss/app.scss';
+
+.team {
+  @include container();
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include tablet() {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include desktop() {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .inner {
+    @include grow();
+    @include innerWrapper();
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      @include h2();
+      align-self: center;
+    }
+
+    .team_mobile {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 8px;
+
+      @include tablet() {
+        margin-top: 56px;
+        grid-gap: 16px;
+      }
+
+      @include desktop() {
+        display: none;
+      }
+
+      .card {
+        position: relative;
+
+        .border {
+          position: absolute;
+          z-index: 1;
+          background: linear-gradient(90deg, rgba(17, 126, 255, 1) 0%, rgba(69, 71, 94, 0) 100%);
+          border-radius: 16px;
+          top: -1px;
+          bottom: -1px;
+          left: -1px;
+          right: -1px;
+        }
+
+        &_inner {
+          overflow: hidden;
+          border-radius: 16px;
+          position: relative;
+          z-index: 2;
+          background: #020525;
+
+          .back {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: auto;
+            height: 300%;
+            opacity: 0.1;
+          }
+
+          .content {
+            padding: 16px;
+            position: relative;
+            background: linear-gradient(224.52deg, rgba(255, 255, 255, 0.2) 4%, rgba(255, 255, 255, 0) 50%, #020525 100%);
+
+            @include tablet() {
+              padding: 32px;
+            }
+
+            .photo {
+              display: block;
+              border-radius: 16px;
+              width: 60px;
+              height: 60px;
+
+              @include tablet() {
+                width: 83px;
+                height: 83px;
+              }
+            }
+
+            .name {
+              margin-top: 10px;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 16px;
+              text-transform: capitalize;
+
+              @include tablet() {
+                margin-top: 24px;
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+
+            .job {
+              font-family: Inter;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 10px;
+              line-height: 16px;
+              color: #6E73A0;
+
+              @include tablet() {
+                font-size: 14px;
+              }
+            }
+
+            .social {
+              margin-top: 8px;
+              display: flex;
+
+              @include tablet() {
+                margin-top: 16px;
+              }
+
+              .link {
+                display: block;
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(8px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.2s;
+
+                &:last-child {
+                  margin-left: 12px;
+                }
+
+                &:hover {
+                  border: 1px solid #117EFF;
+                  background: rgba(255, 255, 255, 0.1);
+                }
+
+                svg {
+                  width: 24px;
+                  height: 24px;
+                }
+
+              }
+
+            }
+
+
+
+
+
+          }
+        }
+      }
+
+    }
+
+    .team_desktop {
+      display: none;
+
+      @include desktop() {
+        display: block;
+        margin-top: 48px;
+      }
+
+      &_row {
+        display: flex;
+        justify-content: center;
+
+
+        &:last-child {
+          margin-top: 28px;
+        }
+
+        .card {
+          position: relative;
+          width: 295px;
+
+          &:not(:first-child) {
+            margin-left: 27px;
+          }
+
+          .border {
+            position: absolute;
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(17, 126, 255, 1) 0%, rgba(69, 71, 94, 0) 100%);
+            border-radius: 16px;
+            top: -1px;
+            bottom: -1px;
+            left: -1px;
+            right: -1px;
+          }
+
+          &_inner {
+            overflow: hidden;
+            border-radius: 16px;
+            position: relative;
+            z-index: 2;
+            background: #020525;
+
+            .back {
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: auto;
+              height: 300%;
+              opacity: 0.1;
+            }
+
+            .content {
+              padding: 16px;
+              position: relative;
+              background: linear-gradient(224.52deg, rgba(255, 255, 255, 0.2) 4%, rgba(255, 255, 255, 0) 50%, #020525 100%);
+
+              @include tablet() {
+                padding: 32px;
+              }
+
+              .photo {
+                display: block;
+                border-radius: 16px;
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+
+                @include tablet() {
+                  width: 83px;
+                  height: 83px;
+                }
+              }
+
+              .name {
+                margin-top: 10px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                text-transform: capitalize;
+
+                @include tablet() {
+                  margin-top: 24px;
+                  font-size: 16px;
+                  line-height: 20px;
+                }
+              }
+
+              .job {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 16px;
+                color: #6E73A0;
+
+                @include tablet() {
+                  font-size: 14px;
+                }
+              }
+
+              .social {
+                margin-top: 8px;
+                display: flex;
+
+                @include tablet() {
+                  margin-top: 16px;
+                }
+
+                .link {
+                  display: block;
+                  text-decoration: none;
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  backdrop-filter: blur(8px);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: 0.2s;
+
+                  &:last-child {
+                    margin-left: 12px;
+                  }
+
+                  &:hover {
+                    border: 1px solid #117EFF;
+                    background: rgba(255, 255, 255, 0.1);
+                  }
+
+                  svg {
+                    width: 24px;
+                    height: 24px;
+                  }
+
+                }
+
+              }
+
+
+
+
+
+            }
+          }
+        }
+
+      }
+
+
+
+    }
+
+  }
+}

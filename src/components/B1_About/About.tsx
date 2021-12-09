@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import style from './about.module.scss'
 import {SvgIcon} from "../../common/SvgIcon/SvgIcon";
 import {svgIcons} from "../../assets/svg/svgIcons";
 import about from '../../assets/png/about.png';
 import back from '../../assets/jpeg/about.jpg';
 import ReactPlayer from "react-player";
+import useIntersectionObserver from "@react-hook/intersection-observer";
+import clsx from "clsx";
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.\n' +
     'Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate ...';
@@ -13,16 +15,26 @@ const url = 'https://user-images.githubusercontent.com/56224288/143682321-534ae7
 
 export const About = () => {
     const [playing, setPlaying] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+    const {isIntersecting} = useIntersectionObserver(ref, {threshold: 0.1});
+    const [intersected, setIntersected] = useState(false);
+    useEffect(() => {
+        if (isIntersecting) {
+            setIntersected(true);
+        }
+    }, [isIntersecting]);
 
     return (
-        <div className={style.about}>
+        <section className={style.about}
+                 ref={ref}
+        >
             <div className={style.card}>
                 <div className={style.innerWrapper}>
 
-                    <div className={style.left}>
+                    <div className={clsx(style.left, intersected && style.left_inter)}>
                         <h2 className={style.left_title}>About us</h2>
 
-                        <p className={style.left_text}>{text}</p>
+                        <div className={style.left_text}>{text}</div>
 
                         <a href="#" className={style.left_link}>
                             <span className={style.left_link_text}>
@@ -47,22 +59,21 @@ export const About = () => {
                                      src={about} alt=""/>
                                 <div className={style.texts}>
                                     <SvgIcon icon={svgIcons.logo}/>
-                                    <p className={style.texts_text}>
+                                    <div className={style.texts_text}>
                                         “We know everything
                                         about trading”
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
 
-                    <div className={style.right}>
+                    <div className={clsx(style.right, intersected && style.right_inter)}>
 
                         <div className={style.right_videoWrapper}>
                             <ReactPlayer
-                                className={style.right_video}
+                                className={style.video}
                                 url={url}
                                 width='100%'
                                 height='auto'
@@ -80,9 +91,9 @@ export const About = () => {
                                     <SvgIcon icon={svgIcons.play}
                                              className={style.right_videoWrapper_control_icon}
                                     />
-                                    <p className={style.right_videoWrapper_control_text}>
+                                    <div className={style.right_videoWrapper_control_text}>
                                         PLAY VIDEO
-                                    </p>
+                                    </div>
                                 </div>
                             }
 
@@ -110,6 +121,6 @@ export const About = () => {
 
             </div>
 
-        </div>
+        </section>
     )
 }

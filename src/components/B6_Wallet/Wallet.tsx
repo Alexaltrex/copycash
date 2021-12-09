@@ -5,7 +5,9 @@ import wallet_1 from '../../assets/png/wallet_1.png';
 import wallet_2 from '../../assets/png/wallet_2.png';
 import wallet_3 from '../../assets/png/wallet_3.png';
 import check from '../../assets/png/check.png';
-import logo from '../../assets/png/wallet_logo.png';
+import logo from '../../assets/webp/wallet_logo.webp';
+import {useInter} from "../../hooks/useInter";
+import clsx from "clsx";
 
 export interface IItem {
     src: string
@@ -37,10 +39,13 @@ const items: IItem[] = [
 ];
 
 export const Wallet = () => {
+    const {ref, intersected} = useInter();
+
     return (
-        <section className={style.wallet}>
+        <section className={style.wallet} ref={ref}
+        >
             <div className={style.card}>
-                <div className={style.inner}>
+                <div className={clsx(style.inner, intersected && style.inner_inter)}>
 
                     <div className={style.firstBlock}>
                         <div className={style.titleWrapper}>

@@ -23,8 +23,11 @@
     flex-direction: column;
 
     @include desktop() {
-      flex-direction: row;
+      //flex-direction: row;
       align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 28px;
       height: 100vh;
     }
 
@@ -33,8 +36,10 @@
       display: flex;
       flex-direction: column;
 
+      @include grow();
+
       @include desktop() {
-        width: 652px;
+        width: 620px;
       }
 
       .titleWrapper {
@@ -77,17 +82,22 @@
       }
 
       .buttons {
-        display: flex;
         margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8px;
 
         @include tablet() {
+          display: flex;
           margin-top: 24px;
         }
 
 
         .button {
           &:not(:first-child) {
-            margin-left: 8px;
+            @include tablet() {
+              margin-left: 8px;
+            }
           }
         }
       }
@@ -107,11 +117,6 @@
           line-height: 30px;
           margin-top: 24px;
         }
-
-        @include desktop() {
-          display: none;
-        }
-
       }
 
       .bottomBlock {
@@ -125,7 +130,7 @@
           flex-direction: row;
           align-items: flex-start;
           justify-content: flex-start;
-          margin-top: 16px;
+          margin-top: 24px;
         }
 
 
@@ -203,16 +208,27 @@
 
     }
 
+    .rightBlock {
+      position: relative;
 
-    .img {
+      @include grow();
+
       @include desktop() {
-        width: 775.69px;
+        width: 620px;
+      }
+
+      .img {
+        width: 100%;
         height: auto;
-        //position: absolute;
-        //bottom: 0px;
-        //right: -40px;
-        //width: 775.69px;
-        //height: 708.97px;
+
+        @include desktop() {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 728px;
+          height: 740px;
+        }
       }
     }
 

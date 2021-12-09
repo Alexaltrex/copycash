@@ -10,6 +10,8 @@ import defi_arrow_left from '../../assets/png/defi_arrow_left.png';
 import defi_arrow_right from '../../assets/png/defi_arrow_right.png';
 import defi_arrow_desktop_right from '../../assets/png/defi_arrow_desktop_right.png';
 import defi_arrow_desktop_left from '../../assets/png/defi_arrow_desktop_left.png';
+import {useInter} from "../../hooks/useInter";
+import clsx from "clsx";
 
 
 const block1 = [
@@ -38,12 +40,13 @@ const block3 = [
 ];
 
 export const Defi = () => {
+    const {ref, intersected} = useInter();
+
     return (
-        <section className={style.defi}
-                 id='DEFI+CEX'
+        <section className={style.defi} ref={ref}
         >
             <div className={style.card}>
-                <div className={style.inner}>
+                <div className={clsx(style.inner, intersected && style.inner_inter)}>
 
                     <h2 className={style.defi_title}>Defi</h2>
 

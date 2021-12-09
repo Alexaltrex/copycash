@@ -1,0 +1,336 @@
+@import '../../assets/scss/app.scss';
+
+.traders {
+  @include container();
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 32px;
+  overflow: hidden;
+
+  @include tablet() {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include desktop() {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+
+  .inner {
+    @include grow();
+    @include innerWrapper();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop() {
+      flex-direction: row-reverse;
+    }
+
+    .titleWrapper {
+      align-self: flex-start;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      @include desktop() {
+        width: 616px;
+        margin-left: 36px;
+      }
+
+      h2 {
+        @include h2();
+      }
+
+      .ellipse {
+        position: absolute;
+        width: 115.94px;
+        height: 42px;
+        bottom: -9px;
+        right: -13px;
+
+        @include tablet() {
+          width: 379px;
+          height: 137.3px;
+          top: 29px;
+          bottom: auto;
+          left: 93px;
+          right: auto;
+        }
+      }
+
+      .phones {
+        @include onlyDesktop();
+        position: absolute;
+        z-index: 5;
+        width: 810px;
+        height: auto;
+        top: 57px + 128px;
+        left: -50px;
+      }
+    }
+
+    .tradersCards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8px;
+      margin-top: 80px;
+
+      @include tablet() {
+        align-self: center;
+        margin-top: 56px;
+        grid-template-columns: 296px 296px;
+        grid-gap: 28px;
+        width: 296px + 296px + 28px;
+      }
+
+      @include desktop() {
+        width: 616px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+          margin-top: 40px;
+        }
+
+        .card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.04);
+          backdrop-filter: blur(9px);
+          border-radius: 16px;
+          padding: 40px 4px 4px;
+
+          @include tablet() {
+            padding: 48px 8px 8px;
+          }
+
+          .backWrapper {
+            border-radius: 16px;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.5;
+            overflow: hidden;
+
+            .back {
+              position: absolute;
+              top: 0;
+              right: 0;
+              opacity: 0.3;
+            }
+          }
+
+          .avatar {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include tablet() {
+              width: 72px;
+              height: 72px;
+            }
+          }
+
+          .mail {
+            position: relative;
+            z-index: 1;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+            color: #6E73A0;
+
+            @include tablet() {
+              font-size: 14px;
+            }
+          }
+
+          .name {
+            position: relative;
+            z-index: 1;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            text-transform: capitalize;
+
+            @include tablet() {
+              margin-top: 2px;
+            }
+          }
+
+          .info {
+            position: relative;
+            z-index: 1;
+            margin-top: 8px;
+            padding: 2px 8px;
+            background: linear-gradient(90.51deg, #16D5FF 3.85%, #21B364 83.43%);
+            border-radius: 8px 8px 0 0;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            color: #161936!important;
+
+            @include tablet() {
+              padding: 0px 8px;
+            }
+
+            span, .procent {
+              font-family: Inter;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 10px;
+              line-height: 12px;
+              text-align: center;
+              color: #161936!important;
+
+              @include tablet() {
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+
+            .procent {
+              font-weight: bold;
+            }
+          }
+
+          .innerCard {
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(9px);
+            border-radius: 20px;
+            padding: 16px;
+
+            @include tablet() {
+              padding: 16px 12px 12px;
+            }
+          }
+
+          .curve {
+            display: block;
+            width: 84px;
+            height: 18.67px;
+
+            @include tablet() {
+              width: 112px;
+              height: 24.89px;
+            }
+          }
+
+          .profit {
+            margin-top: 12px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            @include text-gradient(rgb(22, 213, 255), rgb(33, 178, 100));
+
+            @include tablet() {
+              margin-top: 4px;
+              font-size: 32px;
+              line-height: 36px;
+            }
+          }
+
+          .profitDescription {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #A5B2C7;
+
+            @include tablet() {
+              margin-top: 4px;
+              font-size: 12px;
+            }
+          }
+
+          .btn {
+            margin-top: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            background: linear-gradient(180deg, #117EFF 0%, #0657F5 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              background: #0657F5;
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+
+            .text {
+              margin-left: 2px;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 20px;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+
+          &:last-child {
+            margin-top: 64px;
+          }
+        }
+      }
+
+    }
+
+    .phones {
+      display: block;
+      width: 416px;
+      height: auto;
+
+      @include tablet() {
+        width: 810px;
+      }
+
+      @include desktop() {
+        display: none;
+      }
+    }
+
+  }
+}

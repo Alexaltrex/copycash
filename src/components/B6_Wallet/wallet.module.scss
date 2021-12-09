@@ -2,6 +2,7 @@
 
 .wallet {
   width: 100%;
+  overflow: hidden;
 
   .card {
     background: linear-gradient(90deg, #00010D 0%, #020525 100%);
@@ -24,6 +25,8 @@
     }
 
     .inner {
+
+      @include grow();
 
       @include tablet() {
         overflow: hidden;

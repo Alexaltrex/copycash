@@ -1,0 +1,124 @@
+@import '../../assets/scss/app.scss';
+
+.partners {
+  @include container();
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include tablet() {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 48px;
+  }
+
+  @include desktop() {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .inner {
+    @include grow();
+    @include innerWrapper();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+      @include h2();
+
+      span {
+        @include text-gradient(rgb(17, 112, 255), rgb(17, 241, 255));
+      }
+    }
+
+    .items {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+
+      @include tablet() {
+        margin-top: 56px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 36px 40px;
+      }
+
+      @include desktop() {
+        margin-top: 48px;
+        grid-gap: 36px 136px;
+      }
+
+      .item {
+
+        &:not(:first-child) {
+          margin-top: 24px;
+
+          @include tablet() {
+            margin-top: 0px;
+          }
+        }
+
+        &:nth-child(1) {
+          .img {
+            width: 131.12px;
+            height: 60px;
+          }
+        }
+
+        &:nth-child(2) {
+          .img {
+            width: 190.47px;
+            height: 48.44px;
+          }
+        }
+        &:nth-child(3) {
+          .img {
+            width: 139px;
+            height: 52px;
+          }
+        }
+        &:nth-child(4) {
+          .img {
+            width: 126.37px;
+            height: 52.01px;
+          }
+        }
+        &:nth-child(5) {
+          .img {
+            width: 123.02px;
+            height: 54.01px;
+          }
+        }
+        &:nth-child(6) {
+          .img {
+            width: 180px;
+            height: 52px;
+          }
+        }
+
+        .img {
+          display: block;
+        }
+
+        .text {
+          margin-top: 16px;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ADB0CF;
+        }
+
+      }
+
+    }
+
+  }
+}
