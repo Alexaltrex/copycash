@@ -119,6 +119,14 @@
         }
       }
 
+      .certik {
+        margin-top: 16px;
+
+        @include desktop() {
+          margin-top: 24px;
+        }
+      }
+
       .bottomBlock {
         display: flex;
         flex-direction: column;

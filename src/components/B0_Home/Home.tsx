@@ -73,6 +73,14 @@ export const Home = () => {
 
                     <div className={style.text}>{text}</div>
 
+                    <a className={style.certik}
+                       href="https://www.certik.com/projects/copycash"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                    >
+                        {svgIcons.certik}
+                    </a>
+
                     <div className={style.bottomBlock}>
                         <div className={style.bottomBlock_left}>
                             <Button text='Buy cash tokens' className={style.button}/>
